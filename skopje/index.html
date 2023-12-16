@@ -127,6 +127,22 @@
 
        });
 
+         const svgMarker = {
+    path: "M33.92,16.89A17,17,0,1,0,14.5,33.78v18h5.08v-18A17.18,17.18,0,0,0,33.92,16.89Z",
+    fillColor: "black",
+    fillOpacity: 1,
+    strokeWeight: 0,
+    rotation: 0,
+    scale: 2,
+    anchor: new google.maps.Point(0, 20),
+  };
+
+       new google.maps.Marker({
+    position: map.getCenter(),
+    icon: svgMarker,
+    map: map,
+  });
+
        const infoWindow = new google.maps.InfoWindow({
          content: generateInfoWindowContent(location),
        });
