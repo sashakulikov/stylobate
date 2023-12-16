@@ -12,12 +12,12 @@
     body, html {
       margin: 0;
       padding: 0;
+      border-radius: 0;
     }
-
-    
 
 
 .texts {
+
 	background: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -28,27 +28,35 @@
 	font-style: light;
 	letter-spacing: 1px;
 	line-height: 22px;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+}
+
+#map {
+  height: calc(100vh - 44px); /* Adjust the height based on the text container's height */
 }
 
 
-    
   </style>
 </head>
 <body>
   <div class="main-container">
     <div class="main-container1">
       <div class="texts">
-         Objects from <i>Skopje. Transmissions from the Past Century’s Most Ambitious Transnational Urban Project</i> publication, 2023 <a href="https://stylobate.net/">stylobate.net</a>.
+         Objects from <i>Skopje. Transmissions from the Past Century’s Most Ambitious Transnational Urban Project</i>, 2023 ISBN 978-9941-8-4994-7 <a href="https://stylobate.net/">Stylobate</a>
         <br>
       </div>
+    </div>
+
     </div>
 <!-- Your map will be displayed here -->
 <div id="map" style="height: 100vh;"></div>
 
 <!-- Your other website content goes here -->
-    
 
-    
+
+
 
 <script>
   // JavaScript code to create and customize the map
@@ -90,15 +98,15 @@ const customMarkerSVG = 'M31.88,15.94A15.94,15.94,0,1,0,14,31.75V50.62h3.83V31.7
 
    function generateInfoWindowContent(location) {
      return `
-      <div style="font-family: 'Times New Roman', Times, serif; font-size: 16px;">
+      <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400;	letter-spacing: 1px; border-radius: 0;">
         <a href="https://www.google.com/maps?q=${location.lat},${location.lng}" target="_blank" style="text-decoration: none; color: #000;">
           ${location.name}
         </a>
       </div>
     `;
 
-       
-    
+
+
    }
 
    function getAverageLatLng(locations) {
@@ -124,6 +132,7 @@ const customMarkerSVG = 'M31.88,15.94A15.94,15.94,0,1,0,14,31.75V50.62h3.83V31.7
       const mapOptions = {
         center: getAverageLatLng(locations),
         zoom: 14,
+        // scrollwheel: false,
         mapTypeControl: false,
         termsOfUseControl: false,
         fullscreenControl: true, // Enable fullscreen control
