@@ -32,6 +32,9 @@
 <div id="map" style="height: 100vh;"></div>
 
 <!-- Your other website content goes here -->
+    
+
+    
 
 <script>
   // JavaScript code to create and customize the map
@@ -73,12 +76,16 @@
 
    function generateInfoWindowContent(location) {
      return `
-       <div>
-         <a href="https://www.google.com/maps?q=${location.lat},${location.lng}" target="_blank" style="text-decoration: none; color: #000;">
-           ${location.name}
-         </a>
-       </div>
-     `;
+    return `
+      <div style="font-family: 'Times New Roman', Times, serif; font-size: 14px;">
+        <a href="https://www.google.com/maps?q=${location.lat},${location.lng}" target="_blank" style="text-decoration: none; color: #000;">
+          ${location.name}
+        </a>
+      </div>
+    `;
+
+       
+    
    }
 
    function getAverageLatLng(locations) {
