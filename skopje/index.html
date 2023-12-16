@@ -123,6 +123,7 @@
        const marker = new google.maps.Marker({
          position: { lat: location.lat, lng: location.lng },
          map,
+         icon: svgMarker,
          title: location.name,
 
        });
@@ -137,11 +138,6 @@
     anchor: new google.maps.Point(0, 20),
   };
 
-       new google.maps.Marker({
-    position: map.getCenter(),
-    icon: svgMarker,
-    map: map,
-  });
 
        const infoWindow = new google.maps.InfoWindow({
          content: generateInfoWindowContent(location),
