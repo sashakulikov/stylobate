@@ -12,6 +12,12 @@
       margin: 0;
       padding: 0;
     }
+
+    
+  .info-window-content {
+    font-family: 'Times New Roman', Times, serif; /* Set the font family */
+  }
+
   </style>
 </head>
 <body>
@@ -112,9 +118,7 @@
          position: { lat: location.lat, lng: location.lng },
          map,
          title: location.name,
-         label: {
-              text: location.name,
-              fontFamily: 'Times New Roman',}
+
        });
 
        const infoWindow = new google.maps.InfoWindow({
