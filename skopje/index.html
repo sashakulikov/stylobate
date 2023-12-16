@@ -71,7 +71,7 @@
     { name: 'Universal Hall, 1963 (p.276)', lat: 41.99921044291647, lng: 21.416510116436395},
     { name: 'Žena Borec Monument, 1970 (p.282)', lat: 41.99364333120048, lng: 21.434085168040614},
   ];
-
+const customMarkerSVG = 'M33.92,16.89A17,17,0,1,0,14.5,33.78v18h5.08v-18A17.18,17.18,0,0,0,33.92,16.89Z';
   let currentInfoWindow = null;
 
    function generateInfoWindowContent(location) {
@@ -109,7 +109,7 @@
    function initMap() {
       const mapOptions = {
         center: getAverageLatLng(locations),
-        zoom: 12.2,
+        zoom: 20,
         mapTypeControl: false,
         termsOfUseControl: false,
         fullscreenControl: true, // Enable fullscreen control
@@ -124,6 +124,12 @@
          position: { lat: location.lat, lng: location.lng },
          map,
          title: location.name,
+         icon: {
+          path: customMarkerSVG,
+          fillColor: 'black',
+          fillOpacity: 1,
+          scale: 0.5, // Adjust the scale as needed
+        },
 
        });
 
