@@ -153,12 +153,14 @@ const customMarkerSVG = 'M31.88,15.94A15.94,15.94,0,1,0,14,31.75V50.62h3.83V31.7
      const averageLat = totalLat / locations.length;
      const averageLng = totalLng / locations.length;
 
+
+
      return { lat: averageLat, lng: averageLng };
    }
 
    function initMap() {
       const mapOptions = {
-        center: getAverageLatLng(locations),
+        center: { lat: 42.01853368788305, lng: 21.42823827310322 }, 
         zoom: 13.5,
         scrollwheel: false,
         mapTypeControl: false,
