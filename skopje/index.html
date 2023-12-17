@@ -28,10 +28,35 @@
 	font-style: light;
 	letter-spacing: 1px;
 	line-height: 22px;
-  position: fixed;
+  position: static;
   top: 0px;
   z-index: 999;
 }
+
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 
 #map {
   height: calc(100vh - 44px); /* Adjust the height based on the text container's height */
@@ -44,14 +69,14 @@
   <div class="main-container">
     <div class="main-container1">
       <div class="texts">
-         Objects from <i>Skopje. Transmissions from the Past Century’s Most Ambitious Transnational Urban Project</i>, 2023 ISBN 978-9941-8-4994-7 <a href="https://stylobate.net/">Stylobate</a>
+         Objects from <i>Skopje. Transmissions from the Past Century’s Most Ambitious Transnational Urban Project</i>. Published by <a href="https://stylobate.net/">Stylobate</a>, 2023. ISBN 978-9941-8-4994-7
         <br>
       </div>
     </div>
 
     </div>
 <!-- Your map will be displayed here -->
-<div id="map" style="height: 100vh;"></div>
+<div id="map"></div>
 
 <!-- Your other website content goes here -->
 
@@ -132,7 +157,7 @@ const customMarkerSVG = 'M31.88,15.94A15.94,15.94,0,1,0,14,31.75V50.62h3.83V31.7
       const mapOptions = {
         center: getAverageLatLng(locations),
         zoom: 14,
-        // scrollwheel: false,
+        scrollwheel: false,
         mapTypeControl: false,
         termsOfUseControl: false,
         fullscreenControl: true, // Enable fullscreen control
