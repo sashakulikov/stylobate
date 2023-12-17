@@ -62,7 +62,7 @@ a:active {
 
 
 #map {
-  height: calc(100vh - 44px); /* Adjust the height based on the text container's height */
+  height: calc(100vh); /* Adjust the height based on the text container's height */
 }
 
 
@@ -159,7 +159,7 @@ const customMarkerSVG = 'M31.88,15.94A15.94,15.94,0,1,0,14,31.75V50.62h3.83V31.7
    function initMap() {
       const mapOptions = {
         center: getAverageLatLng(locations),
-        zoom: 14,
+        zoom: 13.5,
         scrollwheel: false,
         mapTypeControl: false,
         termsOfUseControl: false,
