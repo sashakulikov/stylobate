@@ -3,8 +3,8 @@
 <head>
   <title>Skopje Map / Stylobate</title>
   <meta name="description" content="Objects from Skopje. Transmissions from the Past Century’s Most Ambitious Transnational Urban Project, 2023">
-  <meta charset="UTF-8"> <!-- //Adding Croatian Unicode-->
-  <meta name="viewport" content="width=device-width">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Updated viewport settings -->
   <!-- Add the Google Maps API script with your API key here -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjICh5HCTM0MDxhlTgBS6g6pSg8aYAVXo&libraries=places"></script>
   <style>
@@ -47,9 +47,14 @@
   z-index: 1;
   mix-blend-mode: difference;
   display: flex;
-  align-items: flex-end; /* Align the content to the bottom */
-  pointer-events: none; /* Make the SVG non-interactive */
+  align-items: flex-end;
+}
 
+/* Media query for screens with a maximum width of 600px (adjust as needed) */
+@media screen and (max-width: 600px) {
+  .logo {
+    height: 150px; /* Adjust the height for smaller screens */
+  }
 }
 
 
